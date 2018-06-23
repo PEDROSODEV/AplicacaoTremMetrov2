@@ -40,7 +40,7 @@ public class DatabaseAccess {
     }
 
     public String getNome(String name){
-        c=db.rawQuery("SELECT nome from tb_rV where nome='" + name + "'",new String[]{});
+        c=db.rawQuery("SELECT nome from tb_rV where nome='" + name + "'", new String[]{});
         StringBuffer buffer = new StringBuffer();
         while(c.moveToNext()){
             String address = c.getString(0);
@@ -49,6 +49,14 @@ public class DatabaseAccess {
         return buffer.toString();
     }
 
-
+    public String getInfo(String info){
+        c=db.rawQuery("SELECT nome FROM tb_rV WHERE nome='"+ info + "'",new String[]{});
+        StringBuffer buffer = new StringBuffer();
+        while (c.moveToNext()){
+            String informacao = c.getString(0);
+            buffer.append(""+informacao);
+        }
+        return buffer.toString();
+    }
 
 }

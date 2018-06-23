@@ -35,9 +35,12 @@ public class ActivityEditar extends AppCompatActivity{
 
         DatabaseAccess dbAc = DatabaseAccess.getInstance(getApplicationContext());
         dbAc.open();
+        String teste;
+
+        teste = dbAc.getInfo(String.valueOf(newString));
 
         edtT = findViewById(R.id.info_et);
-        edtT.setText();
+        edtT.setText(teste);
 
         dbAc.close();
 
