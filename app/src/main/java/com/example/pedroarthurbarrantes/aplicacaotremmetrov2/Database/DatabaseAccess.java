@@ -59,4 +59,36 @@ public class DatabaseAccess {
         return buffer.toString();
     }
 
+    public String getAco(String aco){
+        c=db.rawQuery("SELECT acom from tb_rV where nome='" + aco + "'",null);
+        StringBuffer buffer = new StringBuffer();
+        while (c.moveToNext()){
+            String acomodacoes = c.getString(0);
+            buffer.append(""+acomodacoes);
+        }
+        return buffer.toString();
+    }
+
+    public String getEnd(String end){
+        c=db.rawQuery("SELECT end from tb_rV where nome='" + end + "'",null);
+        StringBuffer buffer = new StringBuffer();
+        while (c.moveToNext()){
+            String endereco = c.getString(0);
+            buffer.append(""+endereco);
+        }
+        return buffer.toString();
+    }
+
+
+    public String getHor(String hor){
+        c=db.rawQuery("SELECT hor from tb_rV where nome='" + hor + "'",null);
+        StringBuffer buffer = new StringBuffer();
+        while (c.moveToNext()){
+            String horario = c.getString(0);
+            buffer.append(""+horario);
+        }
+        return buffer.toString();
+    }
+
+
 }

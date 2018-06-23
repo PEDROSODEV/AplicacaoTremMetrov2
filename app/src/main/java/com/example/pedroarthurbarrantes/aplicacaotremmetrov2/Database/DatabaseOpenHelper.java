@@ -8,6 +8,7 @@ import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 public class DatabaseOpenHelper extends SQLiteAssetHelper {
     private static final String DATABASE_NAME = "data.db";
     private static final String TABLE_NAME = "tb_rV";
+    private static final String CREATE_TABLE = "CREATE TABLE tb_rV ( 'id' INTEGER PRIMARY KEY AUTOINCREMENT, 'nome' TEXT NOT NULL, 'url' BLOB NOT NULL, 'info' TEXT, 'acom' TEXT, 'end' TEXT, 'hor' TEXT )";
     private static final int DATABASE_VERSION = 1;
 
     //construtor
@@ -23,6 +24,8 @@ public class DatabaseOpenHelper extends SQLiteAssetHelper {
         super.onUpgrade(db, oldVersion, newVersion);
 
         db.execSQL("DROP TABLE IF EXISTS tb_rV");
+        db.execSQL(CREATE_TABLE);
         onCreate(db);
+
     }
 }

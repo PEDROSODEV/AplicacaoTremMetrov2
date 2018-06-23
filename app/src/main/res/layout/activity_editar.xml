@@ -40,7 +40,72 @@
         android:hint="Informações da Estação"
         android:id="@+id/info_et"
         android:textColor="#000"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="90dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/acomodacoes_tv"
+        android:text="Acomodações da Estação:"
+        android:textColor="#000"
+        android:layout_below="@+id/info_et"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/acomodacoes_et"
+        android:hint="Acomodações da Estação"
+        android:textColor="#000"
+        android:textSize="14sp"
+        android:layout_below="@+id/acomodacoes_tv"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="90dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/endereco_tv"
+        android:textColor="#000"
+        android:text="Endereço da Estação: "
+        android:layout_below="@+id/acomodacoes_et"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/endereco_et"
+        android:textColor="#000"
+        android:hint="Endereço da Estação"
+        android:layout_below="@+id/endereco_tv"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="90dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="Horário de Funcionamento da Estação: "
+        android:id="@+id/horario_tv"
+        android:layout_below="@+id/endereco_et"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="55dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/horatio_et"
+        android:layout_below="@+id/horario_tv"
+        android:hint="Horaário de Funcionamneto da Estação"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:textSize="14sp"/>
 
 
 

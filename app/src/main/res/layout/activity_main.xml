@@ -14,6 +14,7 @@
         android:textColor="#000"
         android:layout_marginTop="45dp"
         android:textSize="14sp"
+        android:layout_marginLeft="150dp"
         />
 
     <android.support.v7.widget.RecyclerView

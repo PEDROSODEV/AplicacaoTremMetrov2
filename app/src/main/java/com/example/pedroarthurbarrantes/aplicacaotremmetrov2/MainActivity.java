@@ -31,11 +31,17 @@ public class MainActivity extends AppCompatActivity {
         DatabaseAccess dbAc = DatabaseAccess.getInstance(getApplicationContext());
         dbAc.open();
 
-        String n = "Estação de SCS";
+        String n = "Estação de São Caetano do Sul";
         String valor = dbAc.getNome(n);
 
-        mImageUrl.add("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj_HJqK0q03JIykdgsFcobtQeJbLrAGt5lb3WeX1NLqNOhphWT");
+        mImageUrl.add("http://www.saocaetanodigital.com.br/wp-content/uploads/2014/12/Rodovi%C3%A1ria-e-Esta%C3%A7%C3%A3o-S%C3%A3o-Caetano.jpg");
         mNames.add(dbAc.getNome(valor));
+
+        mImageUrl.add("https://static.panoramio.com.storage.googleapis.com/photos/large/17667128.jpg");
+        mNames.add(dbAc.getNome("Estação de Santo André"));
+
+        mImageUrl.add("http://trjs.com.br/images/rodoviaria_joao_setti.jpg");
+        mNames.add(dbAc.getNome("Estação de São Bernardo"));
 
         dbAc.close();
 
