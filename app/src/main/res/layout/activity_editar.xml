@@ -8,11 +8,7 @@
     android:id="@+id/edit_layout"
     android:orientation="vertical">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:id="@+id/imagem"
-        android:src="@mipmap/ic_launcher"/>
+
 
     <TextView
         android:id="@+id/nomeImage"
@@ -30,13 +26,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imagem"
+        android:layout_below="@+id/nomeImage"
         android:text="Informações da Estação: "
         android:id="@+id/info_tv"
         android:textColor="#000"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="90dp"/>
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/info_tv"

@@ -17,9 +17,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ActivityEditar extends AppCompatActivity{
 
-    ArrayList<String> newString;
+    String newString,stringTeste;
     TextView txtV;
-    EditText edtT;
+    TextView edtT;
 
 
     @Override
@@ -28,19 +28,18 @@ public class ActivityEditar extends AppCompatActivity{
         setContentView(R.layout.activity_editar);
         Bundle extras = getIntent().getExtras();
         if (!extras.isEmpty()){
-            newString = extras.getStringArrayList("IMPORTANT_VALUE");
+            newString = extras.getString("IMPORTANT_VALUE");
         }
         txtV = findViewById(R.id.nomeImage);
-        txtV.setText(String.valueOf(newString));
+        txtV.setText(newString);
 
         DatabaseAccess dbAc = DatabaseAccess.getInstance(getApplicationContext());
         dbAc.open();
-        String teste;
 
-        teste = dbAc.getInfo(String.valueOf(newString));
+        stringTeste = dbAc.getInfo(newString);
 
         edtT = findViewById(R.id.info_et);
-        edtT.setText(teste);
+        edtT.setText(stringTeste);
 
         dbAc.close();
 

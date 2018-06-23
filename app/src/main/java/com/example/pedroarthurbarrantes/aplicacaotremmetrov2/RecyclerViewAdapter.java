@@ -24,7 +24,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private ArrayList<String> mImageNames = new ArrayList<>();
     private ArrayList<String> mImages = new ArrayList<>();
-    private ArrayList<String> mImageDelete = new ArrayList<>();
+    private String mImagesString = new String();
     private Context mContext;
 
 
@@ -64,7 +64,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(mContext.getApplicationContext(),ActivityEditar.class);
-                i.putExtra("IMPORTANT_VALUE",mImageNames);
+                mImagesString = mImageNames.get(position);
+                i.putExtra("IMPORTANT_VALUE",String.valueOf(mImagesString));
                 mContext.startActivity(i);
             }
         });
