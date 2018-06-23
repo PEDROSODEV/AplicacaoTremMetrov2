@@ -8,6 +8,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.RelativeLayout;
 
+import com.example.pedroarthurbarrantes.aplicacaotremmetrov2.Database.DatabaseAccess;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,8 +27,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initImageBitmap(){
+
+        DatabaseAccess dbAc = DatabaseAccess.getInstance(getApplicationContext());
+        dbAc.open();
+
+        String n = "Estação de SCS";
+        String valor = dbAc.getNome(n);
+
         mImageUrl.add("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj_HJqK0q03JIykdgsFcobtQeJbLrAGt5lb3WeX1NLqNOhphWT");
-        mNames.add("Estação de São Caetano do Sul");
+        mNames.add(dbAc.getNome(valor));
+
+        dbAc.close();
 
         initRecyclerView();
     }

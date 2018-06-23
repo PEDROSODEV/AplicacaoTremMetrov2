@@ -64,6 +64,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(mContext.getApplicationContext(),ActivityEditar.class);
+                i.putExtra("IMPORTANT_VALUE",mImageNames);
                 mContext.startActivity(i);
             }
         });
@@ -87,7 +88,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             super(itemView);
             image = itemView.findViewById(R.id.image);
             imageName = itemView.findViewById(R.id.image_name);
-            deleteName = itemView.findViewById(R.id.image_delete);
             parentLayout = itemView.findViewById(R.id.parent_layout);
         }
 

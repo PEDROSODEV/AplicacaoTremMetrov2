@@ -33,4 +33,7 @@ dependencies {
 
     //circleimageview
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //sqlite
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
 }
